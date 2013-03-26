@@ -11,11 +11,15 @@
 	function replace_everything_but_nouns_with( $replacement_word = 'nurble', $text ) {
 		$non_nouns = get_non_nouns_from( $text );
 
-		$modified_text = str_ireplace(
-			$search = $non_nouns,
-			$replace = '<span class="' . $replacement_word . '">' . $replacement_word . '</span>',
-			$subject = $text
-		);
+		$modified_text = $text;
+
+		foreach( $non_nouns as $non_noun ) {
+			$modified_text = preg_replace(
+				$pattern = '/\b' . $non_noun . '\b/i',
+				$replacement = '<span class="' . $replacement_word . '">' . $replacement_word . '</span>',
+				$subject = $modified_text
+			);
+		}
 
 		return $modified_text;
 	}
