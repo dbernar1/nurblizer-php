@@ -31,7 +31,7 @@ if ( $user_has_submitted_text_to_nurblize ) :
     </fieldset>
 </form>
 <p>
-    <a href="http://www.smbc-comics.com/?id=2779">wtf?</a>
+    <a href="http://www.smbc-comics.com/?id=2779" target="_blank">wtf?</a>
 </p>
 <?php endif ?>
 
