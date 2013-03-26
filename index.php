@@ -11,7 +11,7 @@ if ( $user_has_submitted_text_to_nurblize ) :
 <h1>Your Nurbled Text</h1>
 <div><?php echo nurble( $_POST[ 'text' ] ) ?></div>
 <p>
-    <a href="/">&lt;&lt; Back</a>
+    <a href="<?php echo $_SERVER[ 'PHP_SELF' ] ?>">&laquo; Back</a>
 </p>
 
 <?php else: ?>
